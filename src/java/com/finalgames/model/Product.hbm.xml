@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.finalgames.model.Product" table="product">
+        <id name="product_id" type="java.lang.Integer">
+            <column name="product_id" />
+            <generator class="identity" />
+        </id>
+        <property name="category_id" type="java.lang.Integer">
+            <column name="category_id" length="5" not-null="true" />
+        </property>
+        <property name="product_name" type="string">
+            <column name="product_name" length="30" not-null="true" />
+        </property>
+        <property name="product_description" type="string">
+            <column name="product_description" length="400" not-null="true" />
+        </property>
+        <property name="unit_price" type="float">
+            <column name="unit_price" not-null="true" />
+        </property>               
+        <property name="product_stock" type="java.lang.Integer">
+            <column name="product_stock" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
